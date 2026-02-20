@@ -1,4 +1,4 @@
-# 🍽️ Restaurant Agent
+#Restaurant Agent
 
 An AI-powered restaurant assistant built with **Node.js**, **Express**, **LangChain**, and **Google Gemini**. It uses a LangGraph ReAct agent to answer menu queries via a simple web chat UI.
 
