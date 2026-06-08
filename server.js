@@ -1,19 +1,18 @@
-import express from "express";
-import dotenv from "dotenv";
-import path from "path";
+const express = require("express");
+const dotenv = require("dotenv");
+const path = require("path");
 dotenv.config({ quiet: true });
 
-import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
-import { DynamicStructuredTool } from "@langchain/core/tools";
-import { createReactAgent } from "@langchain/langgraph/prebuilt";
-import { HumanMessage } from "@langchain/core/messages";
-import { z } from "zod";
+const { ChatGoogleGenerativeAI } = require("@langchain/google-genai");
+const { DynamicStructuredTool } = require("@langchain/core/tools");
+const { createReactAgent } = require("@langchain/langgraph/prebuilt");
+const { HumanMessage } = require("@langchain/core/messages");
+const { z } = require("zod");
 
 const port = 4000;
 const app = express();
 app.use(express.json());
 
-const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, "public")));
 
 const model = new ChatGoogleGenerativeAI({
