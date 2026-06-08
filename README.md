@@ -104,7 +104,3 @@ http://localhost:4000
 
 ---
 
-## 📝 Notes
-
-- The project uses **ES Modules** (`"type": "module"` in `package.json`). Use `import` syntax, not `require()`.
-- If `nodemon` fails due to PowerShell restrictions, use `npx nodemon server.js` instead.
